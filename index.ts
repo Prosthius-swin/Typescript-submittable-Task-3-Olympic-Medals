@@ -1,7 +1,8 @@
-
+import { IResult } from './models/IResult';
+import { Medals } from './models/Medals.enum';
+import { Country } from './models/Country';
 import './style.css';
 // TODO: required imports
-
 
 const countrySelect: HTMLSelectElement = <HTMLSelectElement>(
   document.getElementById('country-slt')
@@ -23,7 +24,7 @@ init();
 // This function sets up some display elements
 function init() {
   let count = 0;
-  for (let c in Countries) {
+  for (let c in countries) {
     if (isNaN(Number(c))) {
       let newOption: HTMLOptionElement = document.createElement('option');
       newOption.innerHTML = c;
@@ -36,9 +37,7 @@ function init() {
   //TODO: populate the Sport select
 
   //TODO: populate the Medal select
-
 }
-
 
 // This function adds a medal to the countries tally
 function addMedal() {
