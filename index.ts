@@ -54,7 +54,6 @@ function init() {
 
   for (let i in Medals) {
     medalSltHTML += `<option value="${i}">${i}</option>`;
-    // if (i === '32') break;
   }
   (document.getElementById('medal-slt') as HTMLOptionElement).innerHTML =
     medalSltHTML;
